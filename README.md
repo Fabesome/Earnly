@@ -1,79 +1,110 @@
 # Earnly
 
-A web application designed to help users track and analyze their work-related earnings and transactions with ease, providing comprehensive financial insights across multiple devices.
+A modern earnings tracking application built with React and Firebase, featuring real-time data synchronization and secure authentication.
 
-## Features
+## Key Features
 
-- Modern iOS 18-style design
-- Secure authentication with Clerk
-- Real-time data synchronization with Firebase
-- Comprehensive earnings tracking and analysis
-- Responsive design for desktop and mobile
-- CSV export functionality
+- 📊 Comprehensive earnings dashboard with comparative analysis
+- 🔄 Real-time data synchronization with Firebase
+- 🔒 Secure authentication with Clerk
+- 📱 Responsive design with dark/light mode
+- 💰 Detailed monthly breakdowns and averages
 
 ## Tech Stack
 
-- React with TypeScript
-- Tailwind CSS for styling
-- Firebase Realtime Database
-- Clerk for authentication
-- Recharts for data visualization
+- **Frontend:** React with TypeScript
+- **Database:** Firebase Realtime Database
+- **Authentication:** Clerk
+- **Styling:** Tailwind CSS
+- **Charts:** Recharts
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Prerequisites
 
-3. Create a `.env.local` file in the root directory with the following variables:
-   ```
-   REACT_APP_FIREBASE_API_KEY=your_api_key
-   REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-   REACT_APP_FIREBASE_DATABASE_URL=your_database_url
-   REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-   REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-   REACT_APP_FIREBASE_APP_ID=your_app_id
-   REACT_APP_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-   ```
+- Node.js 16.x or later
+- Firebase account
+- Clerk account
 
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+### Setup
+
+1. Install dependencies
+```bash
+npm install
+```
+
+2. Configure environment variables in `.env.local`:
+```env
+REACT_APP_CLERK_PUBLISHABLE_KEY=
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTH_DOMAIN=
+REACT_APP_FIREBASE_DATABASE_URL=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGE_BUCKET=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+REACT_APP_FIREBASE_APP_ID=
+```
+
+3. Start the development server
+```bash
+npm start
+```
 
 ## Project Structure
 
 ```
 earnly/
 ├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/         # Page components
-│   ├── hooks/         # Custom React hooks
-│   ├── services/      # Firebase and API services
-│   ├── types/         # TypeScript type definitions
-│   └── utils/         # Utility functions
-├── public/           # Static assets
-└── ...config files
+│   ├── components/
+│   │   ├── common/
+│   │   └── dashboard/
+│   ├── config/
+│   ├── pages/
+│   ├── types/
+│   └── utils/
+├── public/
+└── package.json
 ```
 
-## Available Scripts
+## Features in Detail
 
-- `npm start`: Run the development server
-- `npm test`: Run tests
-- `npm run build`: Build for production
-- `npm run eject`: Eject from Create React App
+### Dashboard
+- Current month earnings with comparative analysis
+  * Comparison vs. last month (amount & percentage)
+  * Comparison vs. average month (amount & percentage)
+- Last month and yearly totals
+- Monthly breakdown with averages
+- Interactive earnings chart
 
-## Contributing
+### Add Earning
+- Comprehensive earning entry form
+- Real-time total calculation
+- Multiple earning categories:
+  * Repair
+  * Installation
+  * Tips
+  * Other
+- Automatic metadata updates
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+### Data Management
+- Real-time data synchronization
+- User-specific data isolation
+- Automatic calculations
+- Secure data storage
 
-## License
+## Future Features
 
-This project is licensed under the MIT License.
+- Data export functionality
+- Advanced reporting features
+- Multiple currency support
+- Custom categories
+
+
+## Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Clerk](https://clerk.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/)
+- [Windsurf](https://codeium.com/windsurf)
